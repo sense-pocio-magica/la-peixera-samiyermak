@@ -28,4 +28,15 @@ public static class DireccioPeixExt
     {
         DireccioPeix.Up => 1, DireccioPeix.Down => -1, _ => 0
     };
+
+    public static DireccioPeix Randomitzar(DireccioPeix actual)
+    {
+        DireccioPeix[] direccions = { DireccioPeix.Up, DireccioPeix.Down, DireccioPeix.Right, DireccioPeix.Left };
+        DireccioPeix nova;
+        do{
+            nova = direccions[Random.Shared.Next(4)];
+        }
+        while(nova == actual);
+        return nova; // Gràcies a això m'evito que el Tauró pugui seguir en la mateixa direcció després del Random.
+    }
 }

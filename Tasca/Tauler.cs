@@ -1,7 +1,9 @@
 namespace Tasca; 
 public class Tauler
 {
-    public int Mida { get; private set; } = 20;
-    
+    public const int Mida = 20;
+    private List<Animal> habitants = new List<Animal>();
+    private Random random = new Random();
 
+    
 }

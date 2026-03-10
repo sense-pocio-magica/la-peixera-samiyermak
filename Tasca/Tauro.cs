@@ -19,17 +19,13 @@ public class Tauro : PeixBase
     {
         if (animal is Tortuga)
         {
-            Direccio = DireccioPeixExt.Random(Direccio); // Haig d'afegir a DireccioPeix un mètode per Random()
+            Direccio = DireccioPeixExt.Randomitzar(Direccio);
         }
         else if (animal is Tauro tauro1)
         {
             if ( tauro1.Sexe == Sexe)
             {
                 Estat = EstatPeix.Mort;
-            }
-            else
-            {
-                
             }
         }
     }

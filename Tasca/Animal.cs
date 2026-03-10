@@ -11,5 +11,5 @@ public abstract class Animal
     }
     
     public abstract void Moure();
-    public abstract void Interactuar(Animal altre);
+    public abstract void Interactuar(Animal animal);
 }

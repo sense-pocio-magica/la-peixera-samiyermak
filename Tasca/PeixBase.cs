@@ -3,7 +3,6 @@ public abstract class PeixBase : Animal
 {
     public Sex Sexe { get; }
     public DireccioPeix Direccio { get; set; }
-    private const int Mida = 20;
     
     protected PeixBase(int x, int y, Sex sexe, DireccioPeix direccio) : base(x, y)
     {
@@ -13,7 +12,10 @@ public abstract class PeixBase : Animal
 
     public override void Moure()
     {
-        X = (X + Direccio.AnarX() + Mida) % Mida;
-        Y = (Y + Direccio.AnarY() + Mida) % Mida;
+        X += Direccio.AnarX();
+        Y += Direccio.AnarY();
+
+        X = (X + Direccio.AnarX() + Tauler.Mida) % Tauler.Mida;
+        Y = (Y + Direccio.AnarY() + Tauler.Mida) % Tauler.Mida;
     }
 }
