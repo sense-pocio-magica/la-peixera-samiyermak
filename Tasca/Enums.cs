@@ -39,4 +39,16 @@ public static class DireccioPeixExt
         while(nova == actual);
         return nova; // Gràcies a això m'evito que el Tauró pugui seguir en la mateixa direcció després del Random.
     }
+    
+    public static DireccioPeix Randomitzar() // Mateix metòde sense parámetres per poder inicialitzar el tauler amb posicions aleatories.
+    {
+        DireccioPeix[] direccions = { DireccioPeix.Up, DireccioPeix.Down, DireccioPeix.Right, DireccioPeix.Left };
+        
+        return direccions[Random.Shared.Next(4)];
+    }
+
+    public static DireccioPeix Randomitzar(DireccioPeix dir1, DireccioPeix dir2) // En un principi fa falta per a que el fill no vagi per cap de les direccions dels pares
+    {
+        
+    }
 }
