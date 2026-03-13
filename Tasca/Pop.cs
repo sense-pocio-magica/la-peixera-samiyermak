@@ -40,6 +40,7 @@ public class Pop : Animal
         if(animal is Tauro)
         {
             Estat = EstatPeix.Mort;
+            Console.WriteLine($"Ha mort un pop.");
         }
         else if(animal is Pop)
         {

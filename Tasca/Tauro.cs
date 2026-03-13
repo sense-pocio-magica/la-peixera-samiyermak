@@ -10,7 +10,7 @@ public class Tauro : PeixBase
     public void PassarRonda()
     {
         rondesViu++;
-        if (rondesViu >= vidaUtil){
+        if (rondesViu > vidaUtil){
             Estat = EstatPeix.Mort;
         }
     }
@@ -26,6 +26,7 @@ public class Tauro : PeixBase
             if ( tauro1.Sexe == Sexe)
             {
                 Estat = EstatPeix.Mort;
+                Console.WriteLine($"Ha mort un tauró.");
             }
         }
     }

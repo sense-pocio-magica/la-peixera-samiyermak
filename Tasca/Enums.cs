@@ -49,6 +49,13 @@ public static class DireccioPeixExt
 
     public static DireccioPeix Randomitzar(DireccioPeix dir1, DireccioPeix dir2) // En un principi fa falta per a que el fill no vagi per cap de les direccions dels pares
     {
-        
+        DireccioPeix[] direccions = { DireccioPeix.Up, DireccioPeix.Down, DireccioPeix.Left, DireccioPeix.Right };
+        DireccioPeix nova;
+        do
+        {
+            nova = direccions[Random.Shared.Next(4)];
+        }
+        while(nova == dir1 || nova == dir2);
+        return nova;
     }
 }

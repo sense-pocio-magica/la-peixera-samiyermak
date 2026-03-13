@@ -10,10 +10,12 @@ public class PeixNormal : PeixBase
         {
             if (peix.Sexe == Sexe)
             Estat = EstatPeix.Mort;
+            Console.WriteLine($"Ha mort un peix.");
         }
         else if (animal is Tauro)
         {
             Estat = EstatPeix.Mort;
+            Console.WriteLine($"Ha mort un peix.");
         }
     }
 }

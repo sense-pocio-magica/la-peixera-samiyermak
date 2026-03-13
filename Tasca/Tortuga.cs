@@ -13,6 +13,7 @@ public class Tortuga : PeixBase
             if (tortuga.Sexe == Sexe)
             {
                 Estat = EstatPeix.Mort;
+                Console.WriteLine($"Ha mort una tortuga.");
             }
         }
     }
